@@ -12,6 +12,13 @@
 class homepageController extends http\controller
 {
 
+    public static function get()
+    {
+        $form = '<form action="index.php?page=accounts?action=create" method="post"
+  enctype="multipart/form-data">';
+        
+        
+    }
     public static function show()
     {
 //this is the show method that is called to show the sites name in a template any array passed in will be accepted by the template function as a model
