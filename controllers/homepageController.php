@@ -40,6 +40,14 @@ class homepageController extends http\controller
 
 
 //I just put a $_POST here but this is where you would put the code to add a record
+    
+          $db = dbConn::getConnection();
+          $tableName = get_called_class();
+          $sql ='INSERT INTO ' .$tableName.'(owneremail,ownerid, createddate,duedate,message,isdone) VALUES ("jss@example.com","77", "2017-12-11","2018-01-02","hi i am shivangi","0")';
+
+          $statement = $db->prepare($sql);
+          $statement->execute();
+          return 0;
         print_r($_POST);
     }
 
